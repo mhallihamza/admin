@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+next-env.d.ts
+
+# Environment files (never commit real keys)
+.env
+.env.*
+!.env.example
+
+# Python (later phases)
+__pycache__/
+.venv/
+
+# Misc
+*.log
+.DS_Store
+.vercel

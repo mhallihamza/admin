@@ -1,0 +1,18 @@
+# Administrative Guide workflow service — LangGraph + FastAPI (same layout as
+# the soukna app: api.py + <name>_graph/ package). Versiones permissive; CI installs.
+langgraph>=0.2.60
+langchain-core>=0.3.0
+langchain-mistralai>=0.2.0
+langchain-astradb>=0.5
+neo4j>=5.23
+httpx-sse>=0.4
+tokenizers>=0.19
+python-dotenv>=1.0
+requests>=2.31
+fastapi>=0.115
+uvicorn[standard]>=0.30
+
+# Testing
+pytest>=8.0
+httpx>=0.27  # FastAPI TestClient
+ruff>=0.5

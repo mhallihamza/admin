@@ -1,0 +1,13 @@
+{
+  "name": "administrative-guide-db-tools",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Applies SQL migrations from ../migrations to Supabase Postgres and runs ad-hoc SQL. Server-side only.",
+  "scripts": {
+    "migrate": "node apply-migrations.mjs"
+  },
+  "dependencies": {
+    "pg": "^8.12.0"
+  }
+}

@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background text-ink;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* Noto Sans Arabic for Arabic; Inter otherwise (loaded via next/font in the layout) */
+  html[lang="ar"] body {
+    font-family: var(--font-noto-arabic), var(--font-inter), system-ui, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold;
+  }
+
+  /* Accessible focus ring: 2 px solid primary green, visible on all interactive elements */
+  :focus-visible {
+    outline: 2px solid #0b5d3b;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-page px-4 sm:px-6 lg:px-8;
+  }
+
+  .card {
+    @apply rounded-lg border border-stroke bg-white;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-primary px-4 py-2.5 text-sm font-medium text-white transition-colors duration-150 hover:bg-primary-dark;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-primary px-4 py-2.5 text-sm font-medium text-primary transition-colors duration-150 hover:bg-primary-light;
+  }
+
+  .input {
+    @apply h-11 w-full rounded-lg border border-stroke bg-white px-3 text-base text-ink placeholder:text-ink-secondary/70;
+  }
+
+  /* 32 px page title, 24 px section title, 18 px card title */
+  .page-title {
+    @apply text-[32px] font-semibold leading-[1.25];
+  }
+
+  .section-title {
+    @apply text-2xl font-semibold;
+  }
+
+  .card-title {
+    @apply text-lg font-semibold;
+  }
+}
+
+/* --- Hero premium (zellige marocain, étoile à 8 branches) --- */
+.hero-premium {
+  background-image: linear-gradient(135deg, #052e22 0%, #0b5d3b 55%, #0d6b44 100%);
+}
+.hero-zellige {
+  background-image: url("data:image/svg+xml,%3Csvg width='84' height='84' viewBox='0 0 84 84' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.07' stroke-width='1.2'%3E%3Cpath d='M42 4l10 14 17 4-4 17 4 17-17 4-10 14-10-14-17-4 4-17-4-17 17-4z'/%3E%3Ccircle cx='42' cy='42' r='7'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 84px 84px;
+  mask-image: radial-gradient(ellipse 90% 80% at 50% 40%, black 30%, transparent 100%);
+}
